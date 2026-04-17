@@ -2,18 +2,21 @@ import Link from "next/link";
 import { ContentCard } from "@/components/content-card";
 import { SiteNav } from "@/components/nav";
 import { PosterCollage } from "@/components/poster-collage";
-import { ZeroSetupAuthCard } from "@/components/zero-setup-auth-card";
+import { RealtimeAuthCard } from "@/components/realtime-auth-card";
 import { catalog } from "@/data/catalog";
-import { buildZeroSetupSeed } from "@/lib/zero-setup-social";
 
 export default async function HomePage() {
-  const showcase = {
-    source: "zero-setup",
-    items: catalog.slice(0, 7)
-  };
-  const heroTitles = showcase.items;
-  const social = buildZeroSetupSeed();
-  const highlightedFeed = social.feed.slice(0, 2);
+  const heroTitles = catalog.slice(0, 7);
+  const highlightedFeed = catalog.slice(0, 2).map((item, index) => ({
+    id: item.id,
+    friend: {
+      avatar: index === 0 ? "AS" : "IR",
+      name: index === 0 ? "Aarya Sen" : "Ishaan Rao"
+    },
+    action: index === 0 ? "recommended" : "finished",
+    content: item,
+    review: index === 0 ? "This one deserves a proper friend-chat thread right after the credits." : "High-energy watch. Perfect for group arguments and late-night rec spam."
+  }));
 
   return (
     <main className="page-shell">
@@ -60,7 +63,7 @@ export default async function HomePage() {
             <h2 style={{ margin: "10px 0 18px", fontSize: "1.9rem" }}>Top-board collage preview</h2>
             <PosterCollage items={heroTitles} />
             <p className="hint" style={{ marginTop: "16px" }}>
-              Zero-setup deploy mode is active. Everything on this page works immediately after a plain GitHub to Vercel deploy.
+              Real-time mode is designed for actual deployed users: profiles, friend requests, recommendations, groups, and live discussion.
             </p>
             <div className="stat-grid">
               <div className="stat-tile">
@@ -68,16 +71,16 @@ export default async function HomePage() {
                 <p className="stat-label">smart recs per prediction run</p>
               </div>
               <div className="stat-tile">
-                <p className="stat-value display">3</p>
-                <p className="stat-label">demo friend profiles included</p>
+                <p className="stat-value display">24/7</p>
+                <p className="stat-label">live social activity once deployed</p>
               </div>
               <div className="stat-tile">
                 <p className="stat-value display">22</p>
-                <p className="stat-label">built-in titles across formats</p>
+                <p className="stat-label">starter titles across formats</p>
               </div>
               <div className="stat-tile">
-                <p className="stat-value display">6</p>
-                <p className="stat-label">sensible onboarding questions</p>
+                <p className="stat-value display">∞</p>
+                <p className="stat-label">friend requests, groups, and chat threads</p>
               </div>
             </div>
           </div>
@@ -94,7 +97,7 @@ export default async function HomePage() {
             </Link>
             <Link href="/social" className="nav-pill">
               <span>What friends are watching</span>
-              <span>{social.friends.length.toString().padStart(2, "0")}</span>
+              <span>RT</span>
             </Link>
             <Link href="/friends/aarya" className="nav-pill">
               <span>Friend profile deep dive</span>
@@ -105,8 +108,12 @@ export default async function HomePage() {
           <div style={{ marginTop: "24px" }}>
               <div className="label pixel">Crew preview</div>
               <div className="friend-stack" style={{ marginTop: "12px" }}>
-              {social.profiles.map((friend) => (
-                <Link href={`/friends/${friend.slug}`} key={friend.id} className="glass friend-card">
+              {[
+                { id: "handle-search", name: "Handle search", handle: "@friend-id", tagline: "Add friends by ID and build your own graph.", avatar: "ID" },
+                { id: "groups", name: "Private groups", handle: "#watch-club", tagline: "Spin up group discussions for a movie or series.", avatar: "GP" },
+                { id: "realtime", name: "Live discussion", handle: "@realtime", tagline: "Messages and recs refresh as people post.", avatar: "RT" }
+              ].map((friend) => (
+                <div key={friend.id} className="glass friend-card">
                   <div className="friend-head">
                     <div className="avatar">{friend.avatar}</div>
                     <div>
@@ -119,14 +126,14 @@ export default async function HomePage() {
                   <p className="friend-copy" style={{ marginTop: "10px" }}>
                     {friend.tagline}
                   </p>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
         </aside>
 
         <div className="content-grid">
-          <ZeroSetupAuthCard />
+          <RealtimeAuthCard />
 
           <section className="feature-grid">
             <div className="glass feature-card pixel-frame">
@@ -140,10 +147,9 @@ export default async function HomePage() {
 
             <div className="glass feature-card pixel-frame">
               <div className="label pixel">Social graph</div>
-              <h2 style={{ margin: "10px 0 8px" }}>Friends-first discovery</h2>
+              <h2 style={{ margin: "10px 0 8px" }}>Actual social layer</h2>
               <p className="hint">
-                You can see current watches, completed logs, private-looking review notes, and specially recommended
-                titles from people you actually care about.
+                Real accounts can add profiles, send friend requests by handle, remove friends, recommend titles, create groups, and discuss specific watches in live threads.
               </p>
             </div>
           </section>
@@ -188,7 +194,7 @@ export default async function HomePage() {
       </section>
 
       <footer className="container footer">
-        <p className="muted">Built to be pushed to GitHub and dropped onto Vercel with zero extra setup. Personal activity saves in each visitor's browser.</p>
+        <p className="muted">Deploy-ready for a real Vercel app backed by Supabase Auth, Postgres, and Realtime.</p>
       </footer>
     </main>
   );
