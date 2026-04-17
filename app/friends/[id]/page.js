@@ -1,21 +1,12 @@
-import { notFound } from "next/navigation";
 import { SiteNav } from "@/components/nav";
-import { ProfileView } from "@/components/profile-view";
-import { getFriendProfile, getSocialGraph } from "@/lib/social-db";
+import { ProfileBrowserClient } from "@/components/profile-browser-client";
 
-export default async function FriendProfilePage({ params }) {
-  const friend = await getFriendProfile(params.id);
-  const social = await getSocialGraph();
-
-  if (!friend) {
-    notFound();
-  }
-
+export default function FriendProfilePage({ params }) {
   return (
     <main className="page-shell">
       <SiteNav />
       <section className="container" style={{ padding: "36px 0 56px" }}>
-        <ProfileView friend={friend} source={social.source} />
+        <ProfileBrowserClient slug={params.id} />
       </section>
     </main>
   );

@@ -20,9 +20,11 @@ export function ProfileView({ friend, source = "fallback" }) {
               {friend.tagline}
             </p>
             <p className="hint" style={{ marginTop: "10px" }}>
-              {source === "supabase"
-                ? "This profile is loading from the live social database."
-                : "This profile is showing fallback social data until Supabase is connected."}
+              {source === "zero-setup"
+                ? "This profile is running in zero-setup mode with built-in data and browser-saved updates."
+                : source === "supabase"
+                  ? "This profile is loading from the live social database."
+                  : "This profile is showing fallback social data until Supabase is connected."}
             </p>
           </div>
         </div>

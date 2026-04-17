@@ -1,16 +1,18 @@
 import Link from "next/link";
-import { AuthCard } from "@/components/auth-card";
 import { ContentCard } from "@/components/content-card";
 import { SiteNav } from "@/components/nav";
 import { PosterCollage } from "@/components/poster-collage";
+import { ZeroSetupAuthCard } from "@/components/zero-setup-auth-card";
 import { catalog } from "@/data/catalog";
-import { getSocialGraph } from "@/lib/social-db";
-import { getLiveHomeShowcase } from "@/lib/tmdb";
+import { buildZeroSetupSeed } from "@/lib/zero-setup-social";
 
 export default async function HomePage() {
-  const showcase = await getLiveHomeShowcase();
+  const showcase = {
+    source: "zero-setup",
+    items: catalog.slice(0, 7)
+  };
   const heroTitles = showcase.items;
-  const social = await getSocialGraph();
+  const social = buildZeroSetupSeed();
   const highlightedFeed = social.feed.slice(0, 2);
 
   return (
@@ -58,9 +60,7 @@ export default async function HomePage() {
             <h2 style={{ margin: "10px 0 18px", fontSize: "1.9rem" }}>Top-board collage preview</h2>
             <PosterCollage items={heroTitles} />
             <p className="hint" style={{ marginTop: "16px" }}>
-              {showcase.source === "tmdb-live"
-                ? "This preview is running on live TMDb catalog data for India."
-                : "This preview is showing seeded fallback titles until TMDb credentials are added."}
+              Zero-setup deploy mode is active. Everything on this page works immediately after a plain GitHub to Vercel deploy.
             </p>
             <div className="stat-grid">
               <div className="stat-tile">
@@ -69,11 +69,11 @@ export default async function HomePage() {
               </div>
               <div className="stat-tile">
                 <p className="stat-value display">3</p>
-                <p className="stat-label">seeded friend profiles live</p>
+                <p className="stat-label">demo friend profiles included</p>
               </div>
               <div className="stat-tile">
                 <p className="stat-value display">22</p>
-                <p className="stat-label">starter fallback titles across formats</p>
+                <p className="stat-label">built-in titles across formats</p>
               </div>
               <div className="stat-tile">
                 <p className="stat-value display">6</p>
@@ -126,7 +126,7 @@ export default async function HomePage() {
         </aside>
 
         <div className="content-grid">
-          <AuthCard />
+          <ZeroSetupAuthCard />
 
           <section className="feature-grid">
             <div className="glass feature-card pixel-frame">
@@ -180,7 +180,7 @@ export default async function HomePage() {
           </section>
 
           <section className="grid-three">
-            {(showcase.source === "tmdb-live" ? heroTitles.slice(0, 3) : catalog.slice(0, 3)).map((item) => (
+            {catalog.slice(0, 3).map((item) => (
               <ContentCard item={item} key={item.id} />
             ))}
           </section>
@@ -188,7 +188,7 @@ export default async function HomePage() {
       </section>
 
       <footer className="container footer">
-        <p className="muted">Built to be pushed to Git and dropped onto Vercel, with Supabase auth and social-database slots ready for live testing.</p>
+        <p className="muted">Built to be pushed to GitHub and dropped onto Vercel with zero extra setup. Personal activity saves in each visitor's browser.</p>
       </footer>
     </main>
   );
