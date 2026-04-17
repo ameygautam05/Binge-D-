@@ -1,0 +1,341 @@
+[
+  {
+    "key": "shogun",
+    "imdbId": "tt9438740",
+    "title": "Shōgun",
+    "titleType": "tvSeries",
+    "year": 2024,
+    "endYear": 2026,
+    "runtimeMinutes": 60,
+    "rating": null,
+    "numVotes": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Freddy Murphy",
+      "Sirius Blvck",
+      "Nick Kartes",
+      "Trent Tomlinson"
+    ]
+  },
+  {
+    "key": "beckham",
+    "imdbId": "tt14524712",
+    "title": "Beckham",
+    "titleType": "tvMiniSeries",
+    "year": 2023,
+    "endYear": 2023,
+    "runtimeMinutes": 70,
+    "rating": 8.1,
+    "numVotes": 40060,
+    "genres": [
+      "Biography",
+      "Documentary",
+      "Sport"
+    ],
+    "peopleHint": [
+      "Franc Alarcón",
+      "Gary Neville",
+      "Tamim El Dalati",
+      "Aleix Montanyés"
+    ]
+  },
+  {
+    "key": "kohrra",
+    "imdbId": "tt27853283",
+    "title": "Kohrra",
+    "titleType": "tvSeries",
+    "year": 2023,
+    "endYear": null,
+    "runtimeMinutes": null,
+    "rating": 7.5,
+    "numVotes": 12029,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "peopleHint": [
+      "Navtej Singh Johar",
+      "Rewati Chetri",
+      "Jatinder Singh",
+      "Ajit Ranjan"
+    ]
+  },
+  {
+    "key": "the-bear",
+    "imdbId": "tt8637042",
+    "title": "The Bear",
+    "titleType": "tvSeries",
+    "year": 2022,
+    "endYear": 2026,
+    "runtimeMinutes": 30,
+    "rating": 6.5,
+    "numVotes": 39,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Adam Lindblom",
+      "Katja Brigge",
+      "Björn Friberg"
+    ]
+  },
+  {
+    "key": "laapataa-ladies",
+    "imdbId": "tt21626284",
+    "title": "Lost Ladies",
+    "titleType": "movie",
+    "year": 2023,
+    "endYear": null,
+    "runtimeMinutes": 122,
+    "rating": 8.3,
+    "numVotes": 59582,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Ravi Kishan",
+      "Ram Sampath",
+      "Sparsh Shrivastava",
+      "Jitain Khanna"
+    ]
+  },
+  {
+    "key": "blue-eye-samurai",
+    "imdbId": "tt30590498",
+    "title": "Blue Eye Samurai",
+    "titleType": "tvSeries",
+    "year": 2023,
+    "endYear": null,
+    "runtimeMinutes": 45,
+    "rating": null,
+    "numVotes": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "peopleHint": []
+  },
+  {
+    "key": "fallout",
+    "imdbId": "tt9714698",
+    "title": "Fallout",
+    "titleType": "tvSeries",
+    "year": 2024,
+    "endYear": null,
+    "runtimeMinutes": 60,
+    "rating": null,
+    "numVotes": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Michaela Schaaf",
+      "Trevor Bukowski",
+      "Cam Keough",
+      "Hailey Roosa"
+    ]
+  },
+  {
+    "key": "kalki-2898-ad",
+    "imdbId": "tt12735488",
+    "title": "Kalki 2898 AD",
+    "titleType": "movie",
+    "year": 2024,
+    "endYear": null,
+    "runtimeMinutes": 180,
+    "rating": 7,
+    "numVotes": 75785,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "peopleHint": [
+      "Hamish Boyd",
+      "Brahmanandam",
+      "Agustín Cavalieri",
+      "C. Aswani Dutt"
+    ]
+  },
+  {
+    "key": "jigarthanda-doublex",
+    "imdbId": "tt24226474",
+    "title": "Jigarthanda Double X",
+    "titleType": "movie",
+    "year": 2023,
+    "endYear": null,
+    "runtimeMinutes": 172,
+    "rating": 8,
+    "numVotes": 11842,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Yamuna",
+      "Tuney John",
+      "Adithya Bhaskar",
+      "Jaikumar"
+    ]
+  },
+  {
+    "key": "kantara",
+    "imdbId": "tt15327088",
+    "title": "Kantara",
+    "titleType": "movie",
+    "year": 2022,
+    "endYear": null,
+    "runtimeMinutes": 148,
+    "rating": 8.1,
+    "numVotes": 116345,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Pratheek Shetty",
+      "Pragathi Rishab Shetty",
+      "Shine Shetty",
+      "Vinay Bidappa"
+    ]
+  },
+  {
+    "key": "the-family-man",
+    "imdbId": "tt9664832",
+    "title": "The Family Man",
+    "titleType": "tvSeries",
+    "year": 2019,
+    "endYear": null,
+    "runtimeMinutes": 45,
+    "rating": null,
+    "numVotes": null,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "peopleHint": [
+      "Shiaslynn Thompson",
+      "Elesé Arias",
+      "Jena Block",
+      "Luis Lopez"
+    ]
+  },
+  {
+    "key": "panchayat",
+    "imdbId": "tt7983428",
+    "title": "Panchayat",
+    "titleType": "tvSeries",
+    "year": 2020,
+    "endYear": null,
+    "runtimeMinutes": null,
+    "rating": 7.6,
+    "numVotes": 30,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Navraj Sharma",
+      "Prabhat Baskota",
+      "Tanka Budathoki",
+      "Shivam Adhikari"
+    ]
+  },
+  {
+    "key": "the-elephant-whisperers",
+    "imdbId": "tt23628262",
+    "title": "The Elephant Whisperers",
+    "titleType": "short",
+    "year": 2022,
+    "endYear": null,
+    "runtimeMinutes": 41,
+    "rating": 7.5,
+    "numVotes": 10859,
+    "genres": [
+      "Documentary",
+      "Short"
+    ],
+    "peopleHint": [
+      "Kumer Kakon Uzzal",
+      "Kartiki Gonsalves",
+      "Elangovan Rangappan",
+      "Bassilo George Cott"
+    ]
+  },
+  {
+    "key": "all-we-imagine-as-light",
+    "imdbId": "tt32086077",
+    "title": "All We Imagine as Light",
+    "titleType": "movie",
+    "year": 2024,
+    "endYear": null,
+    "runtimeMinutes": 118,
+    "rating": 7,
+    "numVotes": 13744,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "peopleHint": [
+      "Payal Kapadia",
+      "Julien Graff",
+      "Suyash Kamat",
+      "Himanshu Prajapati"
+    ]
+  },
+  {
+    "key": "zakir-khan-tathastu",
+    "imdbId": "tt23623070",
+    "title": "Zakir Khan: Tathastu",
+    "titleType": "tvSpecial",
+    "year": 2022,
+    "endYear": null,
+    "runtimeMinutes": 94,
+    "rating": 9,
+    "numVotes": 4405,
+    "genres": [
+      "Comedy"
+    ],
+    "peopleHint": [
+      "Ankur Kaushik",
+      "Ramesh Mallesh Ayaldar",
+      "Rishabh Nahar",
+      "Dharamraj Dongriyal"
+    ]
+  },
+  {
+    "key": "maharaja",
+    "imdbId": "tt9619832",
+    "title": "Maharaja",
+    "titleType": "movie",
+    "year": 2024,
+    "endYear": null,
+    "runtimeMinutes": 141,
+    "rating": 6.2,
+    "numVotes": 34,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "peopleHint": [
+      "Mohamad Shishakli",
+      "Raed Senan",
+      "Edmond Haddad",
+      "Dana Halabi"
+    ]
+  }
+]
